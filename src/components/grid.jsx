@@ -5,7 +5,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./grid.css";
 
-const Grid = ({}) => {
+const Grid = () => {
   const [query, setQuery] = useState("");
   const rowData = [
     {
@@ -107,9 +107,9 @@ const Grid = ({}) => {
     console.log(event);
   }
 
-  const defaultColDef = useMemo(() => ({
+  const defaultColDef = {
     editable: true,
-  }));
+  };
 
   return (
     <div style={{ position: "relative" }}>
